@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Windows 98</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="./desktop.css" />
+</head>
+
+<body>
+    <main id="desktop" class="desktop" aria-label="Desktop">
+        <div class="icon-grid" role="list">
+            <button class="desktop-icon" role="listitem" data-action="open" data-target="recycle"
+                aria-label="Recycle Bin">
+                <img src="./assets/icons/recycle_bin.png" alt="" draggable="false" />
+                <span>Recycle Bin</span>
+            </button>
+
+            <button class="desktop-icon" role="listitem" data-action="open" data-target="ie"
+                aria-label="Internet Explorer">
+                <img src="./assets/icons/ie.png" alt="" draggable="false" />
+                <span>Internet Explorer</span>
+            </button>
+
+            <button class="desktop-icon" role="listitem" data-action="open" data-target="folder" aria-label="My Folder">
+                <img src="./assets/icons/folder.png" alt="" draggable="false" />
+                <span>Secret Data</span>
+            </button>
+
+            <button class="desktop-icon" role="listitem" data-action="open" data-target="valentine"
+                aria-label="valentine.exe">
+                <img src="./assets/icons/valentine.png" alt="" draggable="false" />
+                <span>valentine.exe</span>
+            </button>
+        </div>
+
+        <section id="windows" class="windows" aria-label="Open windows"></section>
+
+        <!-- Taskbar -->
+        <footer class="taskbar" aria-label="Taskbar">
+            <button class="start-button" type="button" aria-label="Start">Start</button>
+
+            <div id="task-buttons" class="task-buttons" aria-label="Open apps"></div>
+
+            <div class="tray" aria-label="System tray">
+                <span id="clock" class="clock" aria-label="Clock">--:--</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./desktop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.desktop {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    background-color: #008080;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+
+.icon-grid {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 14px;
+    width: 110px;
+}
+
+.desktop-icon {
+    all: unset;
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    padding: 6px 4px;
+    cursor: default;
+    user-select: none;
+}
+
+.desktop-icon img {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.desktop-icon span {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+    line-height: 1.1;
+    padding: 2px 4px;
+    border: 1px dotted transparent;
+}
+
+.desktop-icon.selected span {
+    background: #000080;
+    border-color: #fff;
+}
+
+.windows {
+    position: absolute;
+    inset: 0;
+    padding-bottom: 38px;
+}
+
+.taskbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 38px;
+    padding: 6px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+
+    background: #c0c0c0;
+    border-top: 2px solid #fff;
+}
+
+.start-button {
+    min-width: 70px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.task-buttons button {
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tray {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    border-left: 2px solid #808080;
+}
+
+.clock {
+    font-size: 12px;
+    padding: 2px 6px;
+    border: 1px inset #fff;
+    background: #c0c0c0;
+}
+
+.icon-grid {
+    z-index: 1;
+    position: relative;
+}
+
+.windows {
+    pointer-events: none;
+    z-index: 2;
+}
+
+.windows .window {
+    pointer-events: auto;
+}
+
+
+.desktop.valentine-mode {
+    background-image: none !important;
+    background-color: #ff9bca !important;
+}
+
+.heart-drop {
+    position: absolute;
+    top: -40px;
+    z-index: 9999;
+    pointer-events: none;
+    animation-name: heartFall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heartFall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+.cat-spawn {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    z-index: 9998;
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+#bsod-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 99999;
+    background: #0000aa;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.bsod-text {
+    color: #ffffff;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 16px;
+    max-width: 800px;
+    line-height: 1.4;
+}
